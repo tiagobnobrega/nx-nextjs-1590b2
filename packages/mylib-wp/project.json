@@ -1,0 +1,34 @@
+{
+  "name": "mylib-wp",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/mylib-wp/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/mylib-wp",
+        "main": "packages/mylib-wp/src/index.ts",
+        "tsConfig": "packages/mylib-wp/tsconfig.lib.json",
+        "assets": ["packages/mylib-wp/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/mylib-wp/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/packages/mylib-wp"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/packages/mylib-wp"
+      }
+    }
+  },
+  "tags": []
+}

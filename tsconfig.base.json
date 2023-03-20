@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nextjs-test/mylib": ["packages/mylib/src/index.ts"],
+      "@nextjs-test/mylib-wp": ["packages/mylib-wp/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
