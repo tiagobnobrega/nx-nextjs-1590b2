@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@nextjs-test/mylib": ["packages/mylib/src/index.ts"],
+      "@nextjs-test/mylib-next": ["packages/mylib-next/src/index.ts"],
       "@nextjs-test/mylib-wp": ["packages/mylib-wp/src/index.ts"]
     }
   },
